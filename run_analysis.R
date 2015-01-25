@@ -17,15 +17,7 @@ run_analysis <- function() {
   
   ## Read data into variables
   
-  ## CHANGE BEFORE SUBMITTING!
-  
-  #x_test <- read.table("X_test.txt")
-  #y_test <- read.table("Y_test.txt")
-  #subject_test <- read.table("subject_test.txt")
-  
-  #x_train <- read.table("X_train.txt")
-  #y_train <- read.table("Y_train.txt")
-  #subject_train <- read.table("subject_train.txt")
+  ## IF YOU ARE CLONING THIS REPO, USE THE FOLLOWING LOAD:
   
   x_test <- read.table("UCI HAR Dataset//test//X_test.txt")
   y_test <- read.table("UCI HAR Dataset//test//Y_test.txt")
@@ -35,9 +27,23 @@ run_analysis <- function() {
   y_train <- read.table("UCI HAR Dataset//train//Y_train.txt")
   subject_train <- read.table("UCI HAR Dataset//train//subject_train.txt")
   
+  x_col_names <- read.table("UCI HAR Dataset//features.txt")
+  
+  ## IF YOU ARE COPYING THIS SCRIPT AND HAVE ALL THE DATA FILES IN YOUR WORKING DIRECTORY, USE THE FOLLOWING LOAD:
+  
+  #x_test <- read.table("X_test.txt")
+  #y_test <- read.table("Y_test.txt")
+  #subject_test <- read.table("subject_test.txt")
+  
+  #x_train <- read.table("X_train.txt")
+  #y_train <- read.table("Y_train.txt")
+  #subject_train <- read.table("subject_train.txt")
+  
+  #x_col_names <- read.table("features.txt")
+    
   # Read column names and shave of the indices
   
-  x_col_names <- read.table("UCI HAR Dataset//features.txt")
+  
   x_col_names <- x_col_names[,2]
   x_col_names <- make.names(x_col_names,unique=TRUE);
   
@@ -89,5 +95,7 @@ run_analysis <- function() {
   ## Rename the column, they now represent the average of each measurement 
   
   colnames(data_part5)[3:88] <- str_c("AVG_",colnames(data_part5)[3:88])
+  
+  write.table(data_part5,"tidy_data_part5.txt",row.name=FALSE)
   
 }
