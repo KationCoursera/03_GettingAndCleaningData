@@ -17,6 +17,7 @@ All measurements are done for X, Y and Z coordinate and are therefore dividied i
 Data set was originally divided into two sets (training and testing). By using run_analysis.R we combine both test and train data to obtain one single set which we then further analyse. During this transformation we renamed the 561 variables to avoid duplicate names. For our transformation, we only used the columns which contain mean and standard deviation values of the measurements. 
 
 The following variables are used in data set:
+	
 	1. Activity
 	  * Describes the activity at which the measurement was taken
 	  * Values:
