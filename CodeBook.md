@@ -14,9 +14,9 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 All measurements are done for X, Y and Z coordinate and are therefore dividied into three measurements.
 
 ## Transformation of original data set:
-Data set was originally divided into two sets (training and testing). By using run_analysis.R we combine both test and train data to obtain one single set which we then further analyse. During this transformation we renamed the 561 variables to avoid duplicate names. For our transformation, we only used the columns which contain mean and standard deviation values of the measurements. 
+Data set was originally divided into two sets (training and testing). By using run_analysis.R we combine both test and train data to obtain one single set which we then further analyse. During this transformation we renamed the 561 variables to avoid duplicate names ('-', '(' and ')' were replaced by dots). For our transformation, we only used the columns which contain mean and standard deviation values of the measurements from the original data set. 
 
-The following variables are used in data set:
+The following variables are used in data set which is finished in part 5 of the assignment:
 	
 	1. Activity
 	  * Describes the activity at which the measurement was taken
